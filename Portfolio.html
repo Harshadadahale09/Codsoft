@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Harshada Dahale</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        line-height: 1.6;
+        background: #0a0a0a; 
+        color: #ddd;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #1a1a1a; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        z-index: 1000;
+        border-bottom: 2px solid #7f00ff;
+    }
+    nav .logo {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #b366ff; 
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+        background: #7f00ff;
+        color: white;
+        border-radius: 5px;
+    }
+
+    section {
+        padding: 100px 30px;
+        min-height: 100vh;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #b366ff;
+    }
+
+    
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg, #1a1a1a, #3b0066);
+        color: white;
+    }
+    .home-info {
+        max-width: 500px;
+    }
+    .home-info h1 {
+        font-size: 2.5em;
+        color: #fff;
+    }
+    .home-info h2 {
+        font-size: 1.5em;
+        margin-top: 10px;
+        color: #b366ff;
+    }
+    .home-info p {
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+    .social-icons {
+        margin-top: 20px;
+    }
+    .social-icons a {
+        color: white;
+        margin-right: 15px;
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: #b366ff;
+    }
+
+    .home-img img {
+        max-width: 400px;
+        border-radius: 50%;
+        border: 5px solid #b366ff;
+    }
+
+    
+    .about {
+        background: #111;
+    }
+    .about p {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        color: #ccc;
+        font-size: 1.1em;
+        line-height: 1.8;
+    }
+
+    
+    .skills p {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ccc;
+    }
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .skill-card {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(127, 0, 255, 0.7);
+    }
+    .skill-card i {
+        font-size: 2em;
+        color: #7f00ff;
+        margin-bottom: 10px;
+    }
+    .skill-card h3 {
+        color: white;
+    }
+
+    
+    .contact p {
+        text-align: center;
+        color: #ccc;
+    }
+    .contact form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact input,
+    .contact textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background: #1a1a1a;
+        color: white;
+    }
+    .contact input::placeholder,
+    .contact textarea::placeholder {
+        color: #aaa;
+    }
+    .contact button {
+        padding: 10px;
+        background: #7f00ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+    .contact button:hover {
+        background: #b366ff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #1a1a1a;
+        color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        .home {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Portfolio.</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="home">
+    <div class="home-info">
+        <h1>Harshada Dahale</h1>
+        <h2>Full Stack Developer</h2>
+        <p>I build modern, professional, and responsive websites and applications using cutting-edge technology.</p>
+        <div class="social-icons">
+            <a href="https://github.com/Harshadadahale09" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/harshada-dahale-487372273/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="home-img">
+        <img src="my photo 1.jpg" alt="Harshada Dahale">
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am Harshada Dahale, a passionate Full Stack Developer specializing in building scalable, efficient, and visually appealing websites and applications.  
+        I combine creativity with functionality to deliver projects that exceed expectations. My focus lies in clean, maintainable code and delivering exceptional user experiences.
+    </p>
+</section>
+
+<section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <p>My Full Stack Development skillset:</p>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+        <div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+        <div class="skill-card"><i class="fab fa-js-square"></i><h3>JavaScript</h3></div>
+        <div class="skill-card"><i class="fab fa-react"></i><h3>React</h3></div>
+        <div class="skill-card"><i class="fab fa-node"></i><h3>Node.js</h3></div>
+        <div class="skill-card"><i class="fas fa-database"></i><h3>Databases</h3></div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Let’s connect! Send me a message below:</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Harshada Dahale | All Rights Reserved
+</footer>
+
+</body>
+</html>
